@@ -4,22 +4,22 @@
     <div class="container d-flex flex-wrap">
 
 
-        @foreach ($data as $item)
+        @foreach ($comics as $comic)
             <div class="card p-5">
                 <figure>
-                    <img src="{{ $item->thumb }}" alt="">
+                    <img src="{{ $comic->thumb }}" alt="">
                 </figure>
-                <h2>{{ $item->title }}</h2>
-                <div>{{ $item->price }}</div>
-                <div>{{ $item->description }}</div>
+                <h2>{{ $comic->title }}</h2>
+                <div>{{ $comic->price }}</div>
+                <div>{{ $comic->description }}</div>
                 <a
-                    href="{{ route('comics.show', ['comic' => $item->id]) }}">Dettagli</a>
+                    href="{{ route('comics.show', ['comic' => $comic->id]) }}">Dettagli</a>
                 <a class="btn btn-sm btn-warning"
-                    href="{{ route('comics.edit', $item->id) }}"
+                    href="{{ route('comics.edit', $comic->id) }}"
                     style="width: 50px">
                     <i class="fa-solid fa-pencil"></i>
                 </a>
-                <form action="{{ route('comics.destroy', $item->id) }}"
+                <form action="{{ route('comics.destroy', $comic->id) }}"
                     method="post">
                     @method('DELETE')
                     @csrf

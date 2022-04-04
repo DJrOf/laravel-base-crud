@@ -6,8 +6,8 @@
         <div class="row">
             <div class="col-4">
                 <div class="mb-3"> 
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" name="name">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title" name="title">
                 </div>
             </div>
             <div class="col-6">

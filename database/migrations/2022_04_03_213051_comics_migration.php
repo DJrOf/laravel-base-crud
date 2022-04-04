@@ -18,7 +18,7 @@ class ComicsMigration extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('thumb');
-            $table->float('price');
+            $table->float('price', 6, 2);
             $table->text('series');
             $table->date('sale_date');
             $table->text('type');
@@ -35,6 +35,6 @@ class ComicsMigration extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('comics');
     }
 }
